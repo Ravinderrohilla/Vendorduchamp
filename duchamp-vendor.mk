@@ -745,7 +745,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/duchamp/proprietary/vendor/etc/init/init.gps_pwr.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gps_pwr.rc \
     vendor/xiaomi/duchamp/proprietary/vendor/etc/init/init.gps_scp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gps_scp.rc \
     vendor/xiaomi/duchamp/proprietary/vendor/etc/init/init.mfp-daemon.aidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.mfp-daemon.aidl.rc \
-    vendor/xiaomi/duchamp/proprietary/vendor/etc/init/init.touch.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.touch.rc \
     vendor/xiaomi/duchamp/proprietary/vendor/etc/init/init.vtservice_aidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vtservice_aidl.rc \
     vendor/xiaomi/duchamp/proprietary/vendor/etc/init/init.wlan_drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.wlan_drv.rc \
     vendor/xiaomi/duchamp/proprietary/vendor/etc/init/mbrain-mtk-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mbrain-mtk-default.rc \
@@ -817,7 +816,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/connfem.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/connfem.cfg \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/conninfra.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/conninfra.cfg \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/fm_cust.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/fm_cust.cfg \
-    vendor/xiaomi/duchamp/proprietary/vendor/firmware/focaltech_ts_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/focaltech_ts_fw.bin \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/goodix_cfg_group_duchamp.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/goodix_cfg_group_duchamp.bin \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/goodix_cfg_group_duchamp_nowater.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/goodix_cfg_group_duchamp_nowater.bin \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/goodix_firmware_duchamp.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/goodix_firmware_duchamp.bin \
@@ -835,8 +833,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/soc7_0_ram_mcu_1b_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc7_0_ram_mcu_1b_1_hdr.bin \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/soc_fm_v1_coeff.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc_fm_v1_coeff.bin \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/soc_fm_v1_patch.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc_fm_v1_patch.bin \
-    vendor/xiaomi/duchamp/proprietary/vendor/firmware/st_fts_L11.ftb:$(TARGET_COPY_OUT_VENDOR)/firmware/st_fts_L11.ftb \
-    vendor/xiaomi/duchamp/proprietary/vendor/firmware/st_fts_L11a.ftb:$(TARGET_COPY_OUT_VENDOR)/firmware/st_fts_L11a.ftb \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/txpowerctrl.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/txpowerctrl.cfg \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/wifi.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi.cfg \
     vendor/xiaomi/duchamp/proprietary/vendor/lib/egl/egl.cfg:$(TARGET_COPY_OUT_VENDOR)/lib/egl/egl.cfg \
