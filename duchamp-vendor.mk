@@ -493,7 +493,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/duchamp/proprietary/odm/etc/dsi_n11a_42_02_0a_dsc_vdo_mi.xml:$(TARGET_COPY_OUT_ODM)/etc/dsi_n11a_42_02_0a_dsc_vdo_mi.xml \
     vendor/xiaomi/duchamp/proprietary/odm/etc/init/display.rc:$(TARGET_COPY_OUT_ODM)/etc/init/display.rc \
     vendor/xiaomi/duchamp/proprietary/odm/etc/init/vendor.xiaomi.hardware.aidl.mtdservice-miteeservice.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.xiaomi.hardware.aidl.mtdservice-miteeservice.rc \
-    vendor/xiaomi/duchamp/proprietary/odm/etc/init/vendor.xiaomi.hardware.dtool1.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.xiaomi.hardware.dtool1.rc \
     vendor/xiaomi/duchamp/proprietary/odm/etc/init/vendor.xiaomi.hardware.mfidoca-miteeservice.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.xiaomi.hardware.mfidoca-miteeservice.rc \
     vendor/xiaomi/duchamp/proprietary/odm/etc/init/vendor.xiaomi.hardware.mlipay-miteeservice.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.xiaomi.hardware.mlipay-miteeservice.rc \
     vendor/xiaomi/duchamp/proprietary/odm/etc/init/vendor.xiaomi.hw.touchfeature-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.xiaomi.hw.touchfeature-service.rc \
@@ -744,7 +743,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/duchamp/proprietary/vendor/etc/init/init.gps_drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gps_drv.rc \
     vendor/xiaomi/duchamp/proprietary/vendor/etc/init/init.gps_pwr.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gps_pwr.rc \
     vendor/xiaomi/duchamp/proprietary/vendor/etc/init/init.gps_scp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gps_scp.rc \
-    vendor/xiaomi/duchamp/proprietary/vendor/etc/init/init.mfp-daemon.aidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.mfp-daemon.aidl.rc \
+    vendor/xiaomi/duchamp/proprietary/vendor/etc/init/init.touch.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.touch.rc \
     vendor/xiaomi/duchamp/proprietary/vendor/etc/init/init.vtservice_aidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vtservice_aidl.rc \
     vendor/xiaomi/duchamp/proprietary/vendor/etc/init/init.wlan_drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.wlan_drv.rc \
     vendor/xiaomi/duchamp/proprietary/vendor/etc/init/mbrain-mtk-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mbrain-mtk-default.rc \
@@ -816,6 +815,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/connfem.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/connfem.cfg \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/conninfra.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/conninfra.cfg \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/fm_cust.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/fm_cust.cfg \
+    vendor/xiaomi/duchamp/proprietary/vendor/firmware/focaltech_ts_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/focaltech_ts_fw.bin \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/goodix_cfg_group_duchamp.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/goodix_cfg_group_duchamp.bin \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/goodix_cfg_group_duchamp_nowater.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/goodix_cfg_group_duchamp_nowater.bin \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/goodix_firmware_duchamp.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/goodix_firmware_duchamp.bin \
@@ -833,6 +833,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/soc7_0_ram_mcu_1b_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc7_0_ram_mcu_1b_1_hdr.bin \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/soc_fm_v1_coeff.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc_fm_v1_coeff.bin \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/soc_fm_v1_patch.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc_fm_v1_patch.bin \
+    vendor/xiaomi/duchamp/proprietary/vendor/firmware/st_fts_L11.ftb:$(TARGET_COPY_OUT_VENDOR)/firmware/st_fts_L11.ftb \
+    vendor/xiaomi/duchamp/proprietary/vendor/firmware/st_fts_L11a.ftb:$(TARGET_COPY_OUT_VENDOR)/firmware/st_fts_L11a.ftb \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/txpowerctrl.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/txpowerctrl.cfg \
     vendor/xiaomi/duchamp/proprietary/vendor/firmware/wifi.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi.cfg \
     vendor/xiaomi/duchamp/proprietary/vendor/lib/egl/egl.cfg:$(TARGET_COPY_OUT_VENDOR)/lib/egl/egl.cfg \
@@ -1642,7 +1644,6 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.aidl.mtdservice-V1-ndk \
     vendor.xiaomi.hardware.bgservice@1.0 \
     vendor.xiaomi.hardware.displayfeature_aidl-V2-ndk \
-    vendor.xiaomi.hardware.dtool1-V1-ndk \
     vendor.xiaomi.hardware.fx.tunnel-V1-ndk \
     vendor.xiaomi.hardware.mfidoca-V1-ndk \
     vendor.xiaomi.hardware.mlipay-V1-ndk \
@@ -1687,8 +1688,8 @@ PRODUCT_PACKAGES += \
     com.xiaomi.plugin.skinbeautifier \
     com.xiaomi.plugin.swflip \
     displayfeature.default \
-    fingerprint.fpc_fod \
-    fingerprint.goodix_fod \
+    fingerprint.fpc_fod.default \
+    fingerprint.goodix_fod.default \
     libArcNetMtk \
     libMiDispDevManager \
     libTrueSight \
@@ -1741,7 +1742,6 @@ PRODUCT_PACKAGES += \
     ImsService \
     HotwordEnrollmentOKGoogleRISCV \
     HotwordEnrollmentXGoogleRISCV \
-    goodix_sz_duchamp \
     mediatek-common \
     mediatek-framework \
     mediatek-ims-base \
@@ -1751,7 +1751,6 @@ PRODUCT_PACKAGES += \
     mediatek-telephony-base \
     mediatek-telephony-common \
     com.android.hotwordenrollment.common.util \
-    AHBF-V3-service.xml \
     CommandService.xml \
     android.hardware.bluetooth-service-mediatek.xml \
     android.hardware.gatekeeper-service.mitee.xml \
@@ -1806,7 +1805,6 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2-service-mediatek \
     android.hardware.security.keymint@3.0-service.mitee \
     dolbycodec2 \
-    mfp-daemon \
     android.hardware.graphics.allocator-V2-service-mediatek.mt6897 \
     arm.mali.platform-service.mediatek.mt6897 \
     camerahalserver \
@@ -1836,7 +1834,6 @@ PRODUCT_PACKAGES += \
     wlan_assistant \
     vtservice \
     fidoca_mitee \
-    vendor.xiaomi.hardware.dtool1-service \
     vendor.xiaomi.hw.touchfeature-service \
     vendor.xiaomi.sensor.citsensorservice.aidl \
     mlipayd_mitee \

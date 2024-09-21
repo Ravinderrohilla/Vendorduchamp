@@ -13818,23 +13818,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "vendor.xiaomi.hardware.dtool1-V1-ndk",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/vendor.xiaomi.hardware.dtool1-V1-ndk.so"],
-			shared_libs: ["libbinder_ndk", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "vendor.xiaomi.hardware.fx.tunnel-V1-ndk",
 	owner: "xiaomi",
 	strip: {
@@ -14602,14 +14585,14 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "fingerprint.fpc_fod",
+	name: "fingerprint.fpc_fod.default",
 	owner: "xiaomi",
 	strip: {
 		none: true,
 	},
 	target: {
 		android_arm64: {
-			srcs: ["proprietary/odm/lib64/hw/fingerprint.fpc_fod.so"],
+			srcs: ["proprietary/odm/lib64/hw/fingerprint.fpc_fod.default.so"],
 			shared_libs: ["liblog", "libpng", "libhidlbase", "libhidltransport", "libutils", "libcutils", "libhwbinder", "libhardware", "vendor.xiaomi.hardware.fx.tunnel@1.0", "vendor.xiaomi.hardware.fx.tunnel-V1-ndk", "libbinder_ndk", "libteecli", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
@@ -14620,14 +14603,14 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "fingerprint.goodix_fod",
+	name: "fingerprint.goodix_fod.default",
 	owner: "xiaomi",
 	strip: {
 		none: true,
 	},
 	target: {
 		android_arm64: {
-			srcs: ["proprietary/odm/lib64/hw/fingerprint.goodix_fod.so"],
+			srcs: ["proprietary/odm/lib64/hw/fingerprint.goodix_fod.default.so"],
 			shared_libs: ["libhidlbase", "libhwbinder", "libhidltransport", "libutils", "libcutils", "liblog", "libhardware", "libion", "libgf_hal", "libc", "libm", "libdl", "libc++", ],
 		},
 	},
@@ -15500,17 +15483,6 @@ android_app_import {
 	product_specific: true,
 }
 
-android_app_import {
-	name: "goodix_sz_duchamp",
-	owner: "xiaomi",
-	apk: "proprietary/odm/app/goodix_sz_duchamp/goodix_sz_duchamp.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	device_specific: true,
-}
-
 dex_import {
 	name: "mediatek-common",
 	owner: "xiaomi",
@@ -15564,15 +15536,6 @@ dex_import {
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/com.android.hotwordenrollment.common.util.jar"],
 	system_ext_specific: true,
-}
-
-prebuilt_etc_xml {
-	name: "AHBF-V3-service.xml",
-	owner: "xiaomi",
-	src: "proprietary/vendor/etc/vintf/manifest/AHBF-V3-service.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
 }
 
 prebuilt_etc_xml {
@@ -16216,24 +16179,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-	name: "mfp-daemon",
-	owner: "xiaomi",
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/bin/hw/mfp-daemon"],
-			shared_libs: ["libcutils", "liblog", "libhidlbase", "libhardware", "libutils", "libvndksupport", "libbinder", "libbinder_ndk", "android.hardware.biometrics.fingerprint-V4-ndk", "android.hardware.biometrics.common-V4-ndk", "android.hardware.biometrics.common.thread", "android.hardware.biometrics.common.util", "vendor.xiaomi.hardware.fingerprintextension-V1-ndk", "com.fingerprints.extension3-V1-ndk", "vendor.xiaomi.hardware.fx.tunnel-V1-ndk", "vendor.xiaomi.hw.touchfeature-V1-ndk-vendor", "libstagefright_foundation", "android.frameworks.sensorservice@1.0", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	strip: {
-		none: true,
-	},
-	prefer: true,
-	relative_install_path: "hw",
-	soc_specific: true,
-}
-
-cc_prebuilt_binary {
 	name: "android.hardware.graphics.allocator-V2-service-mediatek.mt6897",
 	owner: "xiaomi",
 	target: {
@@ -16741,24 +16686,6 @@ cc_prebuilt_binary {
 		none: true,
 	},
 	prefer: true,
-	device_specific: true,
-}
-
-cc_prebuilt_binary {
-	name: "vendor.xiaomi.hardware.dtool1-service",
-	owner: "xiaomi",
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/odm/bin/hw/vendor.xiaomi.hardware.dtool1-service"],
-			shared_libs: ["libutils", "libbase", "liblog", "libbinder_ndk", "vendor.xiaomi.hardware.dtool1-V1-ndk", "libcutils", "libc++", "libc", "libm", "libdl", ],
-		},
-	},
-	compile_multilib: "64",
-	strip: {
-		none: true,
-	},
-	prefer: true,
-	relative_install_path: "hw",
 	device_specific: true,
 }
 
