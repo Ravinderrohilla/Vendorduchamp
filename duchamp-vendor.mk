@@ -1674,6 +1674,8 @@ PRODUCT_PACKAGES += \
     mediatek-telecom-common \
     mediatek-telephony-base \
     mediatek-telephony-common \
+    mediatek-services \
+    mediatek-carrier-config \
     com.android.hotwordenrollment.common.util \
     AHBF-V3-service.xml \
     CommandService.xml \
