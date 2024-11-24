@@ -15921,9 +15921,9 @@ dex_import {
 }
 
 dex_import {
-	name: "mediatek-carrier-config",
+	name: "mediatek-carrier-config-manager",
 	owner: "xiaomi",
-	jars: ["proprietary/system/framework/mediatek-carrier-config.jar"],
+	jars: ["proprietary/system/framework/mediatek-carrier-config-manager.jar"],
 }
 
 
