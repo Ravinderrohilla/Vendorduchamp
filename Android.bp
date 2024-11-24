@@ -15915,6 +15915,20 @@ dex_import {
 }
 
 dex_import {
+	name: "mediatek-services",
+	owner: "xiaomi",
+	jars: ["proprietary/system/framework/mediatek-services.jar"],
+}
+
+dex_import {
+	name: "mediatek-carrier-config",
+	owner: "xiaomi",
+	jars: ["proprietary/system/framework/mediatek-carrier-config.jar"],
+}
+
+
+
+dex_import {
 	name: "com.android.hotwordenrollment.common.util",
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/com.android.hotwordenrollment.common.util.jar"],
